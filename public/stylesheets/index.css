@@ -1,0 +1,33 @@
+
+.request {
+    background-color: dimgrey;
+    margin:auto;
+    display: table;
+    width:80%;
+    height: 5%;
+}
+
+.a {
+    display: table;
+    margin: auto;
+    width: 90%;
+    height: 5%;
+    background-color: antiquewhite;
+    margin: 2px;
+    padding: 2px;
+}
+
+.a:hover {
+    background-color: burlywood;
+}
+
+.donte {
+    margin-right: 55%;
+}
+
+#logo {
+    margin: auto;
+    display: table;
+    width: 40%;
+    height: 40%;
+}
