@@ -25,10 +25,51 @@ public class item extends Model{
 	private Boolean Donated ;
 	 
 	public item (String a, String b, String c, Date d , Boolean e) {
-		this.Item = a;
-		this.UserName_Surviver = b;
-		this.UserName_Doner = c;
-		this.Publish_Date = d;
-		this.Donated = e;
+		this.setItem(a);
+		this.setUserName_Doner(b);
+		this.setUserName_Doner(c);
+		this.setPublish_Date(d);
+		this.setDonated(e);
 	}
+
+	public String getItem() {
+		return Item;
+	}
+
+	public void setItem(String item) {
+		Item = item;
+	}
+
+	public String getUserName_Surviver() {
+		return UserName_Surviver;
+	}
+
+	public void setUserName_Surviver(String userName_Surviver) {
+		UserName_Surviver = userName_Surviver;
+	}
+
+	public String getUserName_Doner() {
+		return UserName_Doner;
+	}
+
+	public void setUserName_Doner(String userName_Doner) {
+		UserName_Doner = userName_Doner;
+	}
+
+	public Date getPublish_Date() {
+		return Publish_Date;
+	}
+
+	public void setPublish_Date(Date publish_Date) {
+		Publish_Date = publish_Date;
+	}
+
+	public Boolean getDonated() {
+		return Donated;
+	}
+
+	public void setDonated(Boolean donated) {
+		Donated = donated;
+	}
+	
 }

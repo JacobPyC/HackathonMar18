@@ -29,4 +29,37 @@ public class survivers extends Model{
 		this.Address = d;
 		
 	}
+
+	public String getUserName() {
+		return UserName;
+	}
+
+	public void setUserName(String userName) {
+		UserName = userName;
+	}
+
+	public String getPasword() {
+		return Pasword;
+	}
+
+	public void setPasword(String pasword) {
+		Pasword = pasword;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
 }

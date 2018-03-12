@@ -23,10 +23,43 @@ public class doners extends Model{
 	private String Address;
 	
 	public doners(String a, String b, String c, String d) {
-		this.UserName = a;
-		this.Pasword = b;
-		this.phone = c;
-		this.Address = d;
+		this.setUserName(a);
+		this.setPasword(b);
+		this.setPhone(c);
+		this.setAddress(d);
 	}
+
+	public String getUserName() {
+		return UserName;
+	}
+
+	public void setUserName(String userName) {
+		UserName = userName;
+	}
+
+	public String getPasword() {
+		return Pasword;
+	}
+
+	public void setPasword(String pasword) {
+		Pasword = pasword;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
 
 }
