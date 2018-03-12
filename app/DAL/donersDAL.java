@@ -15,8 +15,13 @@ public class donersDAL {
 		
 		if(Ebean.find(doners.class).where().eq("UserName", name).eq("Pasword", pswd) != null) {
 			isExists = true;
-		}
-		
+		}		
 		return isExists;		
+	}
+	
+	public int getScore() {
+		int sumScore = 0;
+		
+		return sumScore;
 	}
 }

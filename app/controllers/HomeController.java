@@ -17,15 +17,15 @@ import models.*;
  */
 public class HomeController extends Controller {
 
-   public static surviversDAL useSurviversDAL;
-   public static itemDAL useItemDAL;
-   public static donersDAL useDonersDAL;
+   public surviversDAL useSurviversDAL = new surviversDAL();
+   public itemDAL useItemDAL = new itemDAL();
+   public donersDAL useDonersDAL = new donersDAL();
    
-   public static Result getList() {
+   public Result getList() {
 	   return ok(Json.toJson(useItemDAL.getAll()));
    }
    
-   public static Result addItem() {
+   public Result addItem() {
 	   
 	   JsonNode data = request().body().asJson();
 	   
@@ -41,7 +41,7 @@ public class HomeController extends Controller {
    
    
    
-    public static Result addSurvivers() {
+    public Result addSurvivers() {
     	
     	JsonNode data = request().body().asJson();
     	
@@ -56,7 +56,7 @@ public class HomeController extends Controller {
         return ok();
     }
     
-  public static Result addDoners() {
+  public Result addDoners() {
     	
     	JsonNode data = request().body().asJson();
     	
@@ -70,5 +70,24 @@ public class HomeController extends Controller {
     	useDonersDAL.addUser(currDurvivers);
         return ok();
     }
-
+  
+  public Result isSurvivExis(String name, String psd) {
+	  if (useSurviversDAL.isExists(name, psd)) {
+		  return ok();
+	  } else {
+		  return badRequest();
+	  }  
+  }
+  
+  public Result isDonersExis(String name, String psd) {
+	  if (useDonersDAL.isExists(name, psd)) {
+		  return ok();
+	  } else {
+		  return badRequest();
+	  } 
+  }
+ 
+  public  Result getScore() {
+	  
+  }
 }
